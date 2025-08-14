@@ -69,6 +69,13 @@ function HotelSection() {
         <h2 className="text-2xl text-white font-bold mb-6 text-start">
           Find the best restaurant ratings below
         </h2>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {visibleHotels.map((hotel, i) => (
+            <HotelCard key={i} {...hotel} />
+          ))}
+        </div>
       </div>
     </section>
   );
