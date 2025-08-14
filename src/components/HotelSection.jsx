@@ -70,6 +70,21 @@ function HotelSection() {
           Find the best restaurant ratings below
         </h2>
 
+        {/* Left Arrow */}
+        <IconButton
+          onClick={handlePrev}
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "10px",
+            transform: "translateY(-50%)",
+            backgroundColor: "white",
+            "&:hover": { backgroundColor: "#e0e0e0" },
+          }}
+        >
+          <ArrowBackIos />
+        </IconButton>
+
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {visibleHotels.map((hotel, i) => (
