@@ -91,6 +91,21 @@ function HotelSection() {
             <HotelCard key={i} {...hotel} />
           ))}
         </div>
+
+        {/* Right Arrow */}
+        <IconButton
+          onClick={handleNext}
+          sx={{
+            position: "absolute",
+            top: "50%",
+            right: "10px",
+            transform: "translateY(-50%)",
+            backgroundColor: "white",
+            "&:hover": { backgroundColor: "#e0e0e0" },
+          }}
+        >
+          <ArrowForwardIos />
+        </IconButton>
       </div>
     </section>
   );
