@@ -1,5 +1,5 @@
 import React from "react";
-import TrendCard from "./TrendCard";
+import TrendCard from "./ReUseable/TrendCard";
 
 const trendsData = [
   {
@@ -105,6 +105,18 @@ export default function LatestTrends() {
     <section className="py-10">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-6">The Latest Trends</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {trendsData.map((item, i) => (
+            <TrendCard
+              key={i}
+              image={item.image}
+              title={item.title}
+              subtitle={item.subtitle}
+              rating={item.rating}
+              price={item.price}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
