@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "@mui/material";
+
 import TrendCard from "./ReUseable/TrendCard";
 
 const trendsData = [
@@ -116,6 +118,15 @@ export default function LatestTrends() {
               price={item.price}
             />
           ))}
+        </div>
+        <div className="flex flex-col items-center mx-auto mt-8  lg:mt-16">
+          <h1 className="text-semibold mb-4">Discover more cool restaurants</h1>
+          <Button
+            variant="contained"
+            className="bg-[#1677BD] text-center mx-auto mt-4"
+          >
+            Show More
+          </Button>
         </div>
       </div>
     </section>
