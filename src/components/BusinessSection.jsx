@@ -32,6 +32,8 @@ function BusinessSection() {
               textTransform: "none",
               "&:hover": { backgroundColor: "#333" },
               marginTop: "30px",
+              display: { xs: "block", md: "inline-block" },
+              mx: { xs: "auto", md: 0 },
             }}
           >
             Explore MyFeedback business
@@ -40,7 +42,7 @@ function BusinessSection() {
       </div>
 
       {/* Right Image */}
-      <div className="flex-1 flex justify-start">
+      <div className="flex-1 flex justify-center lg:justify-start mb-3">
         <img
           src="Business.png"
           alt="Business"

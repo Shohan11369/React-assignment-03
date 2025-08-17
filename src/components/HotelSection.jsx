@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IconButton } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import HotelCard from "./ReUseable/Hotelcard";
+import ArrowButton from "./ReUseable/ArrowButton";
 function HotelSection() {
   const hotels = [
     {
@@ -71,19 +72,7 @@ function HotelSection() {
         </h2>
 
         {/* Left Arrow */}
-        <IconButton
-          onClick={handlePrev}
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "10px",
-            transform: "translateY(-50%)",
-            backgroundColor: "white",
-            "&:hover": { backgroundColor: "#e0e0e0" },
-          }}
-        >
-          <ArrowBackIos />
-        </IconButton>
+        <ArrowButton direction="left" onClick={handlePrev} />
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -93,19 +82,7 @@ function HotelSection() {
         </div>
 
         {/* Right Arrow */}
-        <IconButton
-          onClick={handleNext}
-          sx={{
-            position: "absolute",
-            top: "50%",
-            right: "10px",
-            transform: "translateY(-50%)",
-            backgroundColor: "white",
-            "&:hover": { backgroundColor: "#e0e0e0" },
-          }}
-        >
-          <ArrowForwardIos />
-        </IconButton>
+        <ArrowButton direction="right" onClick={handleNext} />
       </div>
     </section>
   );
