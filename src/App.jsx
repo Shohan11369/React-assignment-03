@@ -6,6 +6,7 @@ import LatestTrends from "./components/LatestTrends";
 
 import NavBar from "./components/NavBar";
 import RecentActivities from "./components/RecentActivities";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <LatestTrends />
       <BusinessSection />
       <RecentActivities />
+      <Footer />
     </>
   );
 }
