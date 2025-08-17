@@ -1,6 +1,6 @@
 import React from "react";
 import { IconButton } from "@mui/material";
-import ActivityCard from "./ReUseable/ActivityCard";
+import ActivityCard from "../pages/ActivityCard";
 import ArrowButton from "./ReUseable/ArrowButton";
 
 function RecentActivities() {

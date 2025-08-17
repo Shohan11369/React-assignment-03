@@ -18,14 +18,12 @@ const menuItems = [
 
 function NavBar() {
   return (
-    <nav className="bg-white shadow-sm w-full">
+    <nav className="bg-white shadow-sm w-full mt-4">
       {/* Top part */}
       <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4">
         {/* Left: Logo */}
-        <div className="flex items-center space-x-2">
-          <span className="bg-primary text-white font-bold px-3 py-1 rounded-md">
-            myfeedback
-          </span>
+        <div className="flex items-center ">
+          <img src="LogoMain.png" className="w-[120px]" alt="" />
         </div>
 
         {/* Middle: Search Bar */}
