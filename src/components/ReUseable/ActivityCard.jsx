@@ -47,7 +47,8 @@ function ActivityCard({ name, location, date, rating, description, images }) {
           <div className="flex justify-center lg:justify-start w-full">
             <Button
               variant="outlined"
-              className="rounded-full border-black normal-case"
+              className="rounded-full bg-blue-400 border-black normal-case 
+               hover:bg-blue-500 hover:border-blue-600 hover:text-white transition"
             >
               Discover
             </Button>

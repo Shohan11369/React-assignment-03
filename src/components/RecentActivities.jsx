@@ -38,7 +38,24 @@ function RecentActivities() {
     console.log("Right arrow clicked!");
   };
 
-  return <section className="w-full py-10 px-6 "></section>;
+  return (
+    <section className="w-full py-10 px-6 ">
+      <div className="relative mr-10 ml-10">
+        <h2 className="flex items-center justify-center lg:justify-start text-2xl font-bold mb-6">
+          Recents activities
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {activities.map((activity, index) => (
+            <ActivityCard key={index} {...activity} />
+          ))}
+        </div>
+
+        {/* Right Arrow */}
+        <ArrowButton direction="right" onClick={handleNext} />
+      </div>
+    </section>
+  );
 }
 
 export default RecentActivities;
