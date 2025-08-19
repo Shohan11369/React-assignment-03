@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { IconButton } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import HotelCard from "../pages/Hotelcard";
-import ArrowButton from "./ReUseable/ArrowButton";
+import HotelCard from "./Hotelcard";
+import ArrowButton from "../ReUseable/ArrowButton";
 function HotelSection() {
   const hotels = [
     {

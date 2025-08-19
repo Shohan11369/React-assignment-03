@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-import TrendCard from "../pages/TrendCard";
+import TrendCard from "./TrendCard";
 
 const trendsData = [
   {

@@ -1,5 +1,7 @@
 import React from "react";
 import { Search, MapPin, User } from "lucide-react";
+import { useState } from "react";
+import ProfileDropDown from "../HomePage/DropDown";
 
 const menuItems = [
   { icon: "/img1.png", label: "Restaurants" },
@@ -17,6 +19,7 @@ const menuItems = [
 ];
 
 function NavBar() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <nav className="bg-white shadow-sm w-full mt-4">
       {/* Top part */}
@@ -26,24 +29,9 @@ function NavBar() {
           <img src="LogoMain.png" className="w-[120px]" alt="" />
         </div>
 
-        {/* Middle: Search Bar */}
-        <div className="flex items-center border border-gray-300 rounded-full overflow-hidden w-[450px] max-w-full">
-          <input
-            type="text"
-            placeholder="restaurant, hotel, service..."
-            className="px-4 py-2 text-sm outline-none flex-1"
-          />
-          <div className="flex items-center border-l border-gray-300 px-3">
-            <MapPin size={16} className="text-gray-500" />
-            <input
-              type="text"
-              placeholder="Singapore"
-              className="px-2 py-2 text-sm outline-none w-24"
-            />
-          </div>
-          <button className="bg-primary text-white p-2 flex items-center justify-center">
-            <Search size={16} />
-          </button>
+        {/* Middle: Search Box / Modal / Dropdown */}
+        <div className="flex-5 mx-4">
+          <ProfileDropDown />
         </div>
 
         {/* Right: Buttons */}

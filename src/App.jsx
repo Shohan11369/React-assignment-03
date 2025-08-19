@@ -1,21 +1,19 @@
 import "./App.css";
-
-import BusinessSection from "./components/BusinessSection";
-import HotelSection from "./components/HotelSection";
-import LatestTrends from "./components/LatestTrends";
-
 import NavBar from "./components/ReUseable/NavBar";
-import RecentActivities from "./components/RecentActivities";
 import Footer from "./components/ReUseable/Footer";
+import HomePage from "./components/HomePage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <HotelSection />
-      <LatestTrends />
-      <BusinessSection />
-      <RecentActivities />
+      <Router>
+        <NavBar />
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </Router>
       <Footer />
     </>
   );
