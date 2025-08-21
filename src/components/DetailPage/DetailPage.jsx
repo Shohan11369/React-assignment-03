@@ -83,6 +83,36 @@ export default function DetailPage() {
           + View all 7 pics
         </button>
       </div>
+
+      {/* ===== Information + Map ===== */}
+      <div className="container ml-20 mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="w-[579px] h-[432px]">
+          <h2 className="text-[34px] font-bold mt-4 mb-2">More information</h2>
+          {/* ✅ See Menu Button */}
+          <button
+            onClick={() => setShowMenu(true)}
+            className="mt-4 bg-green-500 text-white px-2 py-1 rounded mb-2"
+          >
+            See the Menu
+          </button>
+          <div className="font-[20px] text-[#232323] ">
+            <p className="mt-4">📞 +65 6723 1234</p>
+            <p className="mt-4">📍 123 Orchard Road</p>
+            <p className="mt-4">🕒 Mon-Sun: 11:00am - 10:00pm</p>
+            <p className="mt-4">🌐 www.bellaitalia.com</p>
+            <p className="mt-4">🌐 www.bellaitalia.com</p>
+          </div>
+        </div>
+        <div className="w-[579px] h-[432px] rounded-lg overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510562.46600975504!2d103.22445587865307!3d1.3139221723070147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11238a8b9375%3A0x887869cf52abf5c4!2sSingapore!5e0!3m2!1sen!2smy!4v1755792296820!5m2!1sen!2smy"
+            className="w-full h-full border-0"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 }
