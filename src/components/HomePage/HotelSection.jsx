@@ -63,9 +63,38 @@ function HotelSection() {
   };
 
   const visibleHotels = hotels.slice(startIndex, startIndex + itemsPerPage);
+  const menuItems = [
+    { icon: "/img1.png", label: "Restaurants" },
+    { icon: "/img2.png", label: "Hotels" },
+    { icon: "/img3.png", label: "Things to do" },
+    { icon: "/img4.png", label: "Flights" },
+    { icon: "/img5.png", label: "Rentals" },
+    { icon: "/img6.png", label: "Shopping" },
+    { icon: "/img7.png", label: "Events" },
+    { icon: "/img1.png", label: "Restaurants" },
+    { icon: "/img2.png", label: "Hotels" },
+    { icon: "/img3.png", label: "Things to do" },
+    { icon: "/img4.png", label: "Flights" },
+    { icon: "/img5.png", label: "Rentals" },
+  ];
 
   return (
     <section className="py-10">
+      {/* Bottom icons menu */}
+      <div className="border-t border-gray-200 overflow-x-auto mt-2">
+        <div className="max-w-6xl mx-auto flex items-center space-x-8 py-2 px-4 text-sm text-gray-600 gap-5">
+          {menuItems.map((item, index) => (
+            <button
+              key={index}
+              onClick={() => navigate("/search")}
+              className="flex flex-col items-center hover:text-primary"
+            >
+              <img src={item.icon} alt={item.label} className="h-5 w-5" />
+              {item.label}
+            </button>
+          ))}
+        </div>
+      </div>
       <div className="relative container mx-auto px-10 py-10 bg-[#1677BD] rounded-xl">
         <h2 className="text-2xl text-white font-bold mb-6 text-start">
           Find the best restaurant ratings below

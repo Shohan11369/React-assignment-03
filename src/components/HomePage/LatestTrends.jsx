@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@mui/material";
-
+import { useNavigate } from "react-router-dom";
 import TrendCard from "./TrendCard";
 
 const trendsData = [
@@ -103,20 +103,31 @@ const trendsData = [
 ];
 
 export default function LatestTrends() {
+  const navigate = useNavigate();
+
+  const handleClick = (item) => {
+    navigate("/details", { state: item });
+  };
+
   return (
     <section className="py-10">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-6">The Latest Trends</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {trendsData.map((item, i) => (
-            <TrendCard
+            <div
               key={i}
-              image={item.image}
-              title={item.title}
-              subtitle={item.subtitle}
-              rating={item.rating}
-              price={item.price}
-            />
+              onClick={() => handleClick(item)}
+              className="cursor-pointer"
+            >
+              <TrendCard
+                image={item.image}
+                title={item.title}
+                subtitle={item.subtitle}
+                rating={item.rating}
+                price={item.price}
+              />
+            </div>
           ))}
         </div>
         <div className="flex flex-col items-center mx-auto mt-8  lg:mt-16">
