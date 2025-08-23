@@ -42,21 +42,24 @@ export default function DetailPage() {
         </div>
       </div>
 
-      {/* ===== Photos Section ===== */}
+      {/* Photos Section */}
       <div className="container mx-auto px-4 md:px-20 mt-16">
         <h2 className="text-lg md:text-xl font-bold mb-3">
           Discover our magnificent place in photos
         </h2>
 
-        <div className="flex flex-col md:flex-row gap-2 h-[300px] sm:h-[400px] md:h-96">
+        <div className="flex flex-col md:flex-row gap-4">
+          {/* Large Photo */}
           <img
             src="/Photo1.png"
             alt="gallery"
-            className="w-full md:w-1/2 h-full object-cover rounded-lg cursor-pointer"
+            className="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-96 object-cover rounded-lg cursor-pointer"
             onClick={() => setZoomImg("/Photo1.png")}
           />
-          <div className="w-full md:w-1/2 grid grid-cols-2 grid-rows-2 gap-2 h-full">
-            {["/Photo2.png", "/Photo3.png", "/Photo3.png", "/Photo2.png"].map(
+
+          {/* Grid of small photos */}
+          <div className="w-full md:w-1/2 grid grid-cols-2 grid-rows-2 gap-2 h-[300px] sm:h-[400px] md:h-96">
+            {["/Photo2.png", "/trend1.png", "/Photo3.png", "/trend3.png"].map(
               (img) => (
                 <img
                   key={img}
@@ -72,38 +75,43 @@ export default function DetailPage() {
 
         <button
           onClick={() => setShowGallery(true)}
-          className="mt-6 md:mt-4 bg-gray-200 rounded-lg flex items-center justify-center text-gray-700 font-medium w-40 h-10"
+          className="mt-6 md:mt-4 bg-gray-200 rounded-lg flex items-center justify-center text-gray-700 font-medium w-40 h-10 mb-4"
         >
           + View all 7 pics
         </button>
       </div>
 
-      {/*  Info + Map */}
-      <div className="container mx-auto px-4 md:px-20 mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="w-full">
-          <h2 className="text-2xl md:text-[34px] font-bold mt-4 mb-2">
-            More information
-          </h2>
-          <button
-            onClick={() => setShowMenu(true)}
-            className="mt-4 bg-green-500 text-white px-3 py-2 rounded mb-2"
-          >
-            See the Menu
-          </button>
-          <div className="text-base text-[#232323]">
-            <p className="mt-4">📞 +65 6723 1234</p>
-            <p className="mt-4">📍 123 Orchard Road</p>
-            <p className="mt-4">🕒 Mon-Sun: 11:00am - 10:00pm</p>
-            <p className="mt-4">🌐 www.bellaitalia.com</p>
+      {/* Info + Map Section */}
+      <div className="container mx-auto px-4 md:px-20 mt-12 md:mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Info */}
+          <div className="flex flex-col gap-4">
+            <h2 className="text-2xl md:text-[34px] font-bold mt-4 mb-2">
+              More information
+            </h2>
+            <button
+              onClick={() => setShowMenu(true)}
+              className="mt-2 bg-green-500 text-white px-3 py-2 rounded mb-2 w-max"
+            >
+              See the Menu
+            </button>
+            <div className="text-base text-[#232323] flex flex-col gap-3">
+              <p>📞 +65 6723 1234</p>
+              <p>📍 123 Orchard Road</p>
+              <p>🕒 Mon-Sun: 11:00am - 10:00pm</p>
+              <p>🌐 www.bellaitalia.com</p>
+            </div>
           </div>
-        </div>
-        <div className="w-full h-[250px] sm:h-[350px] md:h-[432px] rounded-lg overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510562.46600975504!2d103.22445587865307!3d1.3139221723070147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11238a8b9375%3A0x887869cf52abf5c4!2sSingapore!5e0!3m2!1sen!2smy!4v1755792296820!5m2!1sen!2smy"
-            className="w-full h-full border-0"
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
+
+          {/* Map */}
+          <div className="w-full h-[250px] sm:h-[350px] md:h-[432px] rounded-lg overflow-hidden mt-6 md:mt-0">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510562.46600975504!2d103.22445587865307!3d1.3139221723070147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11238a8b9375%3A0x887869cf52abf5c4!2sSingapore!5e0!3m2!1sen!2smy!4v1755792296820!5m2!1sen!2smy"
+              className="w-full h-full border-0"
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
       </div>
 
@@ -165,11 +173,11 @@ export default function DetailPage() {
         </div>
       </div>
 
-      {/* ===== Reviews Section ===== */}
+      {/* Reviews Section  */}
       <div className="container mx-auto px-4 md:px-20 mt-8">
         <h2 className="text-xl font-bold mb-3">Customer Reviews</h2>
 
-        {/* 🔍 Filter + ⇅ Sort */}
+        {/*Filter + Sort */}
         <div className="flex justify-between items-center border-b pb-3 mb-5">
           <div className="flex gap-3">
             <button className="flex items-center gap-2 border px-4 py-2 rounded-full shadow-sm hover:bg-gray-50">
